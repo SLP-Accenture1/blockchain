@@ -1,38 +1,112 @@
-# A block is stored as a tuple of
-# (parent_hash, transactions, hash_itself)
+import hashlib
 
-def get_parent_hash(block):
-    return block[0]
+class AirToken:
+    def __init__(self, previous_block_hash, transaction_list):
+        
+        self.previous_block_hash = previous_block_hash
+        self.transaction_list = transaction_list
+        self.block_data = "-".join(transaction_list) + "-" + previous_block_hash
+        self.block_hash = hashlib.sha256(self.block_data.encode()).hexdigest()
+ 
+t1 = "Log Maintenance Details"
+t2 = "Date: "
+t3 = "Aircraft: "
+t4 = "Recording Tach Time: "
+t5 = "Today's Flight: "
+t6 = "Total Time in Service: "
+t7 = "Name of Logger: "
+t8 = "Certificate No. of Technician or Repair Facility: "
+t9 = "Description of Inspections, Tests, Repairs and Alterations: "
+t10 = "Parts replaced/fixed/upgraded: "
 
+print(" ")
 
-def get_transactions(block):
-    return block[1]
+x = input("Type 'x' to exit the program ")
 
+count = 0
 
-def get_hash_itself(block):
-    return block[2]
+while(x != 'x'): 
 
-# function to create a block in a blockchain
-def create_block(transactions, parent_hash):
-    hash_itself = hash((transactions, parent_hash))
-    return (parent_hash, transactions, hash_itself)
+    hash = "firstblock"
 
+    if(count == 0):
 
-# function to create the genesis block
-def create_genesis_block(transactions):
-    return create_block(transactions, 0)
+        date = input(t2)
+        t2 = t2 + date
 
+        aircraft = input(t3)
+        t3 = t3 + aircraft
 
-# we create our genesis block
-genesis_block = create_genesis_block("X paid $100 to Y")
+        tachTime = input(t4)
+        t4 = t4 + tachTime
 
-# print the hash of the genesis_block
-genesis_block_hash = get_hash_itself(genesis_block)
-print ("genesis_block_hash:"), genesis_block_hash
+        todayFlight = input(t5)
+        t5 = t5 + todayFlight
 
-# create another block
-block1 = create_block("Y paid $20 to Z, X paid $10 to P", genesis_block_hash)
+        serviceTime = input(t6)
+        t6 = t6 + serviceTime
 
-# print the hash of block1
-block1_hash = get_hash_itself(block1)
-print ("block1_hash:", block1_hash)
+        logger = input(t7)
+        t7 = t7 + logger
+
+        credential = input(t8)
+        t8 = t8 + credential
+
+        description = input(t9)
+        t9 = t9 + description
+
+        parts = input(t10)
+        t10 = t10 + parts
+
+        block1 = AirToken('firstblock', [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10])
+        print("Block 1 data: " + block1.block_data + "\n")
+        print("Block 1 hash: " + block1.block_hash + "\n")
+        hash = block1.block_hash
+
+    else:
+        t1 = "Log Maintenance Details"
+        t2 = "Date: "
+        t3 = "Aircraft: "
+        t4 = "Recording Tach Time: "
+        t5 = "Today's Flight: "
+        t6 = "Total Time in Service: "
+        t7 = "Name of Logger: "
+        t8 = "Certificate No. of Technician or Repair Facility: "
+        t9 = "Description of Inspections, Tests, Repairs and Alterations: "
+        t10 = "Parts replaced/fixed/upgraded: "
+
+        date = input(t2)
+        t2 = t2 + date
+
+        aircraft = input(t3)
+        t3 = t3 + aircraft
+
+        tachTime = input(t4)
+        t4 = t4 + tachTime
+
+        todayFlight = input(t5)
+        t5 = t5 + todayFlight
+
+        serviceTime = input(t6)
+        t6 = t6 + serviceTime
+
+        logger = input(t7)
+        t7 = t7 + logger
+
+        credential = input(t8)
+        t8 = t8 + credential
+
+        description = input(t9)
+        t9 = t9 + description
+
+        parts = input(t10)
+        t10 = t10 + parts
+
+        hash = block1.block_hash
+        block1 = AirToken(hash, [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10])
+        print("Block 2 data: " + block1.block_data + "\n")
+        print("Block 2 hash: " + block1.block_hash + "\n")
+        
+    count = count+1
+
+    x = input("Type 'x' to exit the program ")
