@@ -6,38 +6,54 @@
             <table>
                 <tr>
                     <td>Solution name (logo)</td>
-                    <td>Log Maintenance Details</td>
-                    <td>View Database</td>
+                    <td><a href="website.html">Log Maintenance Details</a></td>
+                    <td><a href="Database.html">View Database</a></td>
                 </tr>
             </table>
         </div>
         <div class='main'>
             <h1>Log Maintenance Details</h1>
             <form>
-                <label for="date">Date: </label>
-                <input type="date" id="date" name="user_date">
-                <br>
-                <label for="aircraft">Aircraft: </label>
-                <input type="text" id="aircraft" name="user_aircraft">
-                <br>
-                <label for="tach_time">Tach Time (revolutions per minute): </label>
-                <input type="number" id="tach_time" name="user_tach_time">
-                <br>
-                <label for="service_time">Total Time in Service: </label>
-                <input type="number" id="service_time" name="user_service_time">
-                <br>
-                <label for="name">Name of logger: </label>
-                <input type="text" id="name" name="user_name">
-                <br>
-                <label for="certificate_num">Certificate No. of Technician or Repair Facility: </label>
-                <input type="number" id="certificate_num" name="user_certificate_num">
-                <br>
-                <label for="description">Description of Inspections, Tests, Repairs and Alterations: </label>
-                <input type="text" id="description" name="user_description">
-                <br>
-                <label for="changes">Parts fixed/upgraded/replaced: </label>
-                <input type="text" id="changes" name="user_changes">
-                <br>
+                <div class='Date'>
+                    <label for="date">Date: </label>
+                    <input type="date" id="date" name="user_date">
+                    <br> 
+                </div>
+                <div class='Aircraft'>
+                    <label for="aircraft">Aircraft: </label>
+                    <input type="text" id="aircraft" name="user_aircraft">
+                    <br>  
+                </div>
+                <div class='Tach_time'>
+                    <label for="tach_time">Tach Time (revolutions per minute): </label>
+                    <input type="number" id="tach_time" name="user_tach_time">
+                    <br>
+                </div>
+                <div class="Service_time">
+                    <label for="service_time">Total Time in Service: </label>
+                    <input type="number" id="service_time" name="user_service_time">
+                    <br>
+                </div>
+                <div class="Name">
+                    <label for="name">Name of logger: </label>
+                    <input type="text" id="name" name="user_name">
+                    <br>
+                </div>
+                <div class="Certificate_num">
+                    <label for="certificate_num">Certificate No. of Technician or Repair Facility: </label>
+                    <input type="number" id="certificate_num" name="user_certificate_num">
+                    <br>
+                </div>
+                <div class="Description">
+                    <label for="description">Description of Inspections, Tests, Repairs and Alterations: </label>
+                    <input type="text" id="description" name="user_description">
+                    <br>  
+                </div>
+                <div class="Changes">
+                    <label for="changes">Parts fixed/upgraded/replaced: </label>
+                    <input type="text" id="changes" name="user_changes">
+                    <br>
+                </div>
                 <button type="submit">Log details</button>
             </form>
         </div>

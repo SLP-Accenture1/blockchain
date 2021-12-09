@@ -1,0 +1,14 @@
+table, tr, td {
+    background-color: lightgray;
+    border-spacing: 20px;
+    text-align: center;
+    width: 1425px;
+}
+
+body {
+    font-family: Helvetica;
+}
+
+h1 {
+    text-align: center;
+}

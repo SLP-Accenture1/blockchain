@@ -1,12 +1,26 @@
 table, tr, td {
-    background-color: lightgray;
+    background-color: lightblue;
     border-spacing: 20px;
     text-align: center;
     width: 1425px;
 }
 
+td:hover {
+    color: white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
 body {
-    font-family: Helvetica;
+    font-family: Monaco;
+    background-color: white;
 }
 
 h1 {
@@ -18,7 +32,8 @@ form {
 }
 
 button {
-    font-size: 20px;
+    font-size: 18px;
+    font-family: Monaco;
 }
 
 button:hover {
