@@ -1,10 +1,11 @@
-from ctypes import create_string_buffer
 import hashlib
 import datetime
 import pickle
+import json
 
 class Blockchain:
-    def __init__(self, genesis_data):
+    def __init__(self, name : str, genesis_data : dict):
+        self.name = name
         self.chain = []
         self.create_block(genesis_data)
 
@@ -14,17 +15,23 @@ class Blockchain:
     def __str__(self) -> str:
         return self.chain
 
-    def create_block(self, proof, data):
-        block = data{'index': len(self.chain) + 1,
-				'timestamp': str(datetime.datetime.now()),
-				'proof': proof,
-				'previous_hash': hashlib.sha256(self.chain[-1])
-                }
-        self.chain.append(block)
+    def create_block(self, data : dict):
+        data['timestamp'] = str(datetime.datetime.now())
+        data['previous_hash'] = self.hash_previous()
+        data['proof'] = proof(self)
+        self.chain.append(data)
 
+    def hash_previous(self):
+        prev_block = {} if len(self.chain) == 0 else self.chain[-1]
+        encoded_block = json.dumps(prev_block, sort_keys=True).encode()
+        return hashlib.sha256(encoded_block).hexdigest()
+    
     def save_block(self):
-        with open('logs/maintainance', 'wb') as f:
+        with open('logs/' + self.name + '.bc', 'wb') as f:
             pickle.dump(self, f)
 
-    def check():
+    def verify():
         pass
+
+def proof(block):
+    return 0
