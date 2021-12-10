@@ -1,11 +1,11 @@
-table, tr, td {
+table, tr, th {
     background-color: lightblue;
     border-spacing: 20px;
     text-align: center;
     width: 1425px;
 }
 
-td:hover {
+th:hover {
     color: white;
 }
 
@@ -20,7 +20,6 @@ a:hover {
 
 body {
     font-family: Monaco;
-    background-color: white;
 }
 
 h1 {
