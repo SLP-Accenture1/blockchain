@@ -13,7 +13,7 @@ class Blockchain:
         return 'Blockchain Object'
 
     def __str__(self) -> str:
-        return self.chain
+        return str(self.chain)
 
     def create_block(self, data : dict):
         data['timestamp'] = str(datetime.datetime.now())
@@ -28,7 +28,7 @@ class Blockchain:
     
     def save_block(self):
         with open('logs/' + self.name + '.bc', 'wb') as f:
-            pickle.dumps(self, f)
+            pickle.dump(self, f)
 
     def verify():
         pass

@@ -9,3 +9,9 @@ details = {
     'Cycles since last check' : 2992
 }
 
+# block1 = Blockchain('Aircraft Maintainance log', details)
+# block1.save_block()
+
+with open('logs/Aircraft Maintainance log.bc', 'rb') as file:
+    block1 = pickle.load(file)
+    
