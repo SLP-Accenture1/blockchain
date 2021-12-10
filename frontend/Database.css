@@ -22,14 +22,15 @@ body {
     font-family: Monaco;
 }
 
-h1 {
-    text-align: center;
-}
-
 .data, .data th, .data tr, td {
     border: 1px black solid;
 }
 
 .data th {
     background-color: lightgray;
+}
+
+.data {
+    position: relative;
+    top: 20px;
 }

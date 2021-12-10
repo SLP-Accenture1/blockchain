@@ -13,6 +13,7 @@
         </div>
         <div class='main'>
             <h1>Log Maintenance Details</h1>
+            <hr>
             <form method="POST">
                 <div class='Date'>
                     <label for="date">Date: </label>
@@ -46,12 +47,12 @@
                 </div>
                 <div class="Description">
                     <label for="description">Description of Inspections, Tests, Repairs and Alterations: </label>
-                    <input type="text" id="description" name="user_description" required>
+                    <textarea name="user_description" cols="40" rows="5" required></textarea>
                     <br>  
                 </div>
                 <div class="Changes">
                     <label for="changes">Parts fixed/upgraded/replaced: </label>
-                    <input type="text" id="changes" name="user_changes" required>
+                    <textarea name="user_changes" cols="40" rows="5" required></textarea>
                     <br>
                 </div>
                 <button type="submit">Log details</button>

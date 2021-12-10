@@ -23,16 +23,35 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
 }
+
 form {
-    text-align: center;
-    line-height: 60px;
+    text-align: left;
+    line-height: 50px;
+}
+
+.Description input {
+    display:inline-block;
+    padding:15px 10px;
+    line-height:140%;
+}
+
+.Description *{
+    vertical-align: middle;
+}
+
+.Changes *{
+    vertical-align: middle;
+    position: relative;
+    top: 12px;
 }
 
 button {
     font-size: 18px;
     font-family: Monaco;
+    position: relative;
+    top: 30px;
 }
 
 button:hover {
