@@ -33,5 +33,5 @@ class Blockchain:
     def verify():
         pass
 
-def proof(block):
-    return 0
+    def proof(block):
+        return 0
