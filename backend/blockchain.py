@@ -28,7 +28,7 @@ class Blockchain:
     
     def save_block(self):
         with open('logs/' + self.name + '.bc', 'wb') as f:
-            pickle.dump(self, f)
+            pickle.dumps(self, f)
 
     def verify():
         pass

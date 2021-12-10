@@ -1,0 +1,1 @@
+block1 = Blockchain('Aircraft Maintainance log', details)
