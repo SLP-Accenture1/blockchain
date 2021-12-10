@@ -28,7 +28,7 @@ h1 {
 
 form {
     text-align: left;
-    line-height: 50px;
+    line-height: 60px;
 }
 
 .Description input {
@@ -62,7 +62,7 @@ button:hover {
 
 img {
     position: relative;
-    bottom: 666px;
+    bottom: 655px;
     width: 150px;
     height: auto;
     left: 150px;
