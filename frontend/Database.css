@@ -42,15 +42,3 @@ body {
     position: relative;
     top: 20px;
 }
-
-.active {
-    background-color: green;
-}
-
-.idle {
-    background-color: yellow;
-}
-
-.decommissioned {
-    background-color: red;
-}
