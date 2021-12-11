@@ -6,11 +6,11 @@
 }
 
 img {
-    position: relative;
-    bottom: 233px;
+    position: fixed;
+    bottom: 666px;
     width: 150px;
     height: auto;
-    left: 150px;
+    left: 158px;
 }
 
 .nav th:hover {
