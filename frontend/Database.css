@@ -1,0 +1,44 @@
+.nav {
+    background-color: lightblue;
+    border-spacing: 20px;
+    text-align: center;
+    width: 1425px;
+}
+
+img {
+    position: fixed;
+    bottom: 666px;
+    width: 150px;
+    height: auto;
+    left: 158px;
+}
+
+.nav th:hover {
+    color: white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+body {
+    font-family: Monaco;
+}
+
+.data, .data th, .data tr, td {
+    border: 1px black solid;
+}
+
+.data th {
+    background-color: lightgray;
+}
+
+.data {
+    position: relative;
+    top: 20px;
+}

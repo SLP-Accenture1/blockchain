@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class='header'>
+            <link href='./website.css' rel="stylesheet">
+            <table>
+                <tr>
+                    <th></th>
+                    <th><a href="website.html">Log Maintenance Details</a></th>
+                    <th><a href="Database.html">View Database</a></th>
+                </tr>
+            </table>
+            
+        </div>
+        <div class='main'>
+            <h1>Log Maintenance Details</h1>
+            <hr>
+            <form method="POST">
+                <div class='Date'>
+                    <label for="date">Date: </label>
+                    <input type="date" id="date" name="user_date" required>
+                    <br> 
+                </div>
+                <div class='Aircraft'>
+                    <label for="aircraft">Aircraft: </label>
+                    <input type="text" id="aircraft" name="user_aircraft" required>
+                    <br>  
+                </div>
+                <div class='Tach_time'>
+                    <label for="tach_time">Tach Time (revolutions per minute): </label>
+                    <input type="number" id="tach_time" name="user_tach_time" required>
+                    <br>
+                </div>
+                <div class="Service_time">
+                    <label for="service_time">Total Time in Service: </label>
+                    <input type="number" id="service_time" name="user_service_time" required>
+                    <br>
+                </div>
+                <div class="Name">
+                    <label for="name">Name of logger: </label>
+                    <input type="text" id="name" name="user_name" required>
+                    <br>
+                </div>
+                <div class="Certificate_num">
+                    <label for="certificate_num">Certificate No. of Technician or Repair Facility: </label>
+                    <input type="number" id="certificate_num" name="user_certificate_num" required>
+                    <br>
+                </div>
+                <div class="Description">
+                    <label for="description">Description of Inspections, Tests, Repairs and Alterations: </label>
+                    <textarea name="user_description" cols="40" rows="5" required></textarea>
+                    <br>  
+                </div>
+                <div class='status'>
+                    <label for='status'>Airplane Status: </label>
+                    <select>
+                        <option class='active' value="active">Active</option>
+                        <option class='idle' value="idle">Idle</option>
+                        <option class='decommissioned' value="decommissioned">Decommissioned</option>
+                    </select>
+                </div>
+                <button type="submit">Log details</button>
+            </form>
+            <img src="Logo.png">
+        </div>
+    </body>
+</html>
