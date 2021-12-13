@@ -67,7 +67,7 @@ class Blockchain:
         with open('logs/' + self.name + '.bc', 'wb') as f:
             pickle.dump(self, f)
 
-    # def verify(self):
+    def verify(self):
     #     previous_block = self.chain[0]
     #     i = 1
 		
@@ -86,9 +86,12 @@ class Blockchain:
     #         i += 1
 		
     #     print('Blockchain is verified')
-    #     return True
+        return True
 
     def broadcast(self):
+        pass
+
+    def search(self):
         pass
 
 
