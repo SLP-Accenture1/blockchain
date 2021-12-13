@@ -61,9 +61,9 @@ button:hover {
 }
 
 img {
-    position: fixed;
-    bottom: 666px;
-    width: 150px;
+    position: absolute;
+    bottom: 633px;
+    width: 120px;
     height: auto;
-    left: 158px;
+    left: 170px;
 }
