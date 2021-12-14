@@ -29,6 +29,7 @@ def hello_world():
 @cross_origin()
 def log_details():
     inputs = request.get_json()
+    print(inputs)
     return json.dumps(inputs)
 
 

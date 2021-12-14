@@ -16,7 +16,7 @@
         <div class='main'>
             <h1>Log Maintenance Details</h1>
             <hr>
-            <form action='http://127.0.0.1:3000' method="POST" id='form_info'>
+            <form id='form_info'>
                 <div class='Date'>
                     <label for="date">Date: </label>
                     <input type="date" id="date" name="user_date" required>
@@ -60,8 +60,23 @@
                         <option class='decommissioned' value="decommissioned">Decommissioned</option>
                     </select>
                 </div>
-                <button type="submit" value='submit' onclick=postFunction()>Log details</button>
+                <button type="submit" value='submit' >Log details</button>
+                <!--<input type="submit">-->
             </form>
+            <!-- <script>
+                form_info.onsubmit = async (e) => {
+                  e.preventDefault();
+              
+                  let response = await fetch('http://127.0.0.1:3000', {
+                    method: 'POST',
+                    body: new FormData(form_info)
+                  });
+              
+                  let result = await response.json();
+              
+                  alert("success");
+                };
+              </script> -->
             <img src="Sky_Logger-logos_black.png">
         </div>
     </body>
