@@ -30,15 +30,15 @@ body {
     font-family: Monaco;
 }
 
-.data, .data th, .data tr, td {
+#data, #data th, #data tr, td {
     border: 1px black solid;
 }
 
-.data th {
+#data th {
     background-color: lightgray;
 }
 
-.data {
+#data {
     position: relative;
     top: 20px;
 }
