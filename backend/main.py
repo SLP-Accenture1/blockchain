@@ -1,6 +1,4 @@
 from blockchain import Blockchain, load_blockchain
-from flask import Flask
-from flask_cors import CORS
 
 details1 = {
     'Manufacturer' : 'Airbus',
@@ -33,39 +31,6 @@ except FileNotFoundError:
 
 print(block1)
 
-# ==============================================================
-'''
-def defaultHandler(err):
-    response = err.get_response()
-    print('response', err, err.get_response())
-    response.data = dumps({
-        "code": err.code,
-        "name": "System Error",
-        "message": err.get_description(),
-    })
-    response.content_type = 'application/json'
-    return response
-
-APP = Flask(__name__)
-CORS(APP)
-
-APP.config['TRAP_HTTP_EXCEPTIONS'] = True
-APP.register_error_handler(Exception, defaultHandler)
-
-@APP.route('/auth/login/v2', methods=['POST'])
-def login():
-    data = request.get_json()
-    auth_user_id = auth_login_v1(
-        data['email'],
-        data['password'],
-        )
-    return dumps({
-        'token' : new_token(auth_user_id),
-        'auth_user_id' : auth_user_id,
-    })
-'''
-
-# ==============================================================
 # Edit blockchain
 block1.add_cache(details2)
 block1.create_block()
